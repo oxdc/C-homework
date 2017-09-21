@@ -19,7 +19,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-// You may need to change the following line if you have moved `main.h`
+// You may need to change the following line if you have moved `src.c`
 #include "../main.h"
 
 // Homework : 2017-09-21
@@ -44,7 +44,7 @@ void homework1_2(void)
 
     int max = (iNum1 < iNum2) ? iNum2 : iNum1;
 
-    printf("The square root of the maximum number = %lf\n", sqrt(max));
+    printf("The square root of the maximum number = %f\n", sqrt(max));
 
     system("pause");
 }
@@ -67,7 +67,7 @@ void homework1_3(void)
 	while (getchar() != '\n')
 		continue;
 
-	printf("x = %lf, x^2 = %lf and sqrt(x) = %lf\n", inputNum, inputNum * inputNum, sqrt(inputNum));
+	printf("x = %f, x^2 = %f and sqrt(x) = %f\n", inputNum, inputNum * inputNum, sqrt(inputNum));
 
 	system("pause");
 }
@@ -90,7 +90,7 @@ void homework1_4(void)
 	while (getchar() != '\n')
 		continue;
 
-	printf("Average = %lf\n", (real1 + real2 + real3 + real4) / 4.0);
+	printf("Average = %f\n", (real1 + real2 + real3 + real4) / 4.0);
 
 	system("pause");
 }

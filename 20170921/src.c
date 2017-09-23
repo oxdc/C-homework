@@ -62,7 +62,7 @@ void homework1_3(void)
 	while (getchar() != '\n')
 		continue;
 
-	printf("x = %f, x^2 = %f and sqrt(x) = %f\n", inputNum, inputNum * inputNum, sqrt(inputNum));
+	printf("x = %f, x^2 = %f and x^3 = %f\n", inputNum, inputNum * inputNum, inputNum * inputNum * inputNum);
 
 	system("pause");
 }

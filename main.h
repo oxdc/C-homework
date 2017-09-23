@@ -4,7 +4,7 @@
  */
 
 /*
- * ¡¾Build pass @ Visual Studio 2017 with Windows10 x64 Professional¡¿
+ * ï¿½ï¿½Build pass@Visual Studio 2017/Codeblocks with Windows10x64 Professionalï¿½ï¿½
  *
  * If you have any problem, Email me : frnet2016@gmail.com or tell me via QQ
  *

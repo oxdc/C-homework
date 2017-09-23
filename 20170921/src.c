@@ -1,9 +1,4 @@
 /*
- * This is the source file of a test-only program
- *
- */
-
-/*
  * ##########################################################################
  * #                                                                        #
  * #                           ATTENTION PLEASE                             #

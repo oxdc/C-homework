@@ -21,8 +21,30 @@
  * it unless you are using the same compiler.
  *
  */
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
 #pragma warning(disable : 4996) // Disable _CRT_SECURE_WARNINGS on Visual Studio
+
+inline void ClearInputQueue();
+int compare_int(const void * num1, const void * num2);
 
 void homework1_2(void);
 void homework1_3(void);
 void homework1_4(void);
+
+void homework2_1(void);
+void homework2_2(void);
+void homework2_3(void);
+void homework2_4(void);
+void homework2_5(void);
+
+void ClearInputQueue()
+{
+	while (getchar() != '\n')
+		continue;
+}

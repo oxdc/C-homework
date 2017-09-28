@@ -10,10 +10,6 @@
  *
  */
 
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-
 // You may need to change the following line if you have moved `src.c`
 #include "../main.h"
 
@@ -30,12 +26,10 @@ void homework1_2(void)
         printf("Inputs must be integers.\n");
 
 		// Clear input queue
-        while(getchar() != '\n')
-            continue;
+		ClearInputQueue();
     }
 
-	while (getchar() != '\n')
-		continue;
+	ClearInputQueue();
 
     int max = (iNum1 < iNum2) ? iNum2 : iNum1;
 
@@ -55,12 +49,11 @@ void homework1_3(void)
 	while (scanf("%lf", &inputNum) != 1)
 	{
 		printf("Inputs must be a real number.\n");
-		while (getchar() != '\n')
-			continue;
+
+		ClearInputQueue();
 	}
 
-	while (getchar() != '\n')
-		continue;
+	ClearInputQueue();
 
 	printf("x = %f, x^2 = %f and x^3 = %f\n", inputNum, inputNum * inputNum, inputNum * inputNum * inputNum);
 
@@ -78,12 +71,11 @@ void homework1_4(void)
 	while (scanf("%lf %lf %lf %lf", &real1, &real2, &real3, &real4) != 4)
 	{
 		printf("Inputs must be real numbers.\n");
-		while (getchar() != '\n')
-			continue;
+
+		ClearInputQueue();
 	}
 
-	while (getchar() != '\n')
-		continue;
+	ClearInputQueue();
 
 	printf("Average = %f\n", (real1 + real2 + real3 + real4) / 4.0);
 

@@ -26,7 +26,10 @@
     <ClCompile Include="..\..\20170921\src20170921.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\20190928\src20170928.c">
+    <ClCompile Include="..\..\20170928\src20170928.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\20170930\src20180930.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

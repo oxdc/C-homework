@@ -43,6 +43,11 @@ void homework2_3(void);
 void homework2_4(void);
 void homework2_5(void);
 
+void homework3_1(void);
+void homework3_2(void);
+void homework3_3(void);
+void homework3_4(void);
+
 void ClearInputQueue()
 {
 	while (getchar() != '\n')

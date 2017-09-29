@@ -35,5 +35,12 @@ int main(void)
 	homework2_4();
 	homework2_5();
 
+	// Homework : 2017-09-28
+	// P36 18, P56 2¡¢3¡¢5
+	homework3_1();
+	homework3_2();
+	homework3_3();
+	homework3_4();
+
 	return 0;
 }

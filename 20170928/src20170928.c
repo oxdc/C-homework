@@ -145,15 +145,17 @@ void homework2_4(void)
 
 	memset(resultStr, 0, 256);
 
-	for(int i = 0; inputNum; i++)
+    int i;
+	for(i = 0; inputNum; i++)
 	{
 		sprintf(resultStr + i, "%d", inputNum % 2);
 		inputNum = inputNum / 2;
 	}
 
 	size_t length = strlen(resultStr);
-	
-	for (size_t j = 0; j <= length / 2; ++j)
+
+	size_t j;
+	for (j = 0; j <= length / 2; ++j)
 	{
 		char ch = resultStr[j];
 		resultStr[j] = resultStr[length - j - 1];
@@ -192,7 +194,7 @@ void homework2_5(void)
 		(num / 1000) % 10,
 		(num / 10000) % 10);
 
-	printf("and total of them equals to %d\n", 
+	printf("and total of them equals to %d\n",
 		num % 10 +
 		(num / 10) % 10 +
 		(num / 100) % 10 +

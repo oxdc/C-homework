@@ -34,6 +34,12 @@
 		<Unit filename="../20170921/src.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../20170928/src20170928.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../20170930/src20180930.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="../main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -10,7 +10,7 @@
  * #                                                                        #
  * ##########################################################################
  *
- * I have used a special line in `main.h` since I'm using Visual Studio 2017. 
+ * I have used a special line in `main.h` since I'm using Visual Studio 2017.
  * Delete it unless you are using the same compiler.
  *
  */

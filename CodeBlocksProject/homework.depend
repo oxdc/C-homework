@@ -1,6 +1,17 @@
 # depslib dependency file v1.0
-1506138088 source:e:\projects\c-homework\main.c
+1506763056 source:e:\projects\c-homework\main.c
 	"main.h"
 
-1506154485 e:\projects\c-homework\main.h
+1506763138 e:\projects\c-homework\main.h
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1506762652 source:e:\projects\c-homework\20170928\src20170928.c
+	"../main.h"
+
+1506762280 source:e:\projects\c-homework\20170930\src20180930.c
+	"../main.h"
 

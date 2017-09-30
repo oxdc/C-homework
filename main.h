@@ -21,6 +21,12 @@
  * it unless you are using the same compiler.
  *
  */
+#pragma warning(disable : 4996) // Disable _CRT_SECURE_WARNINGS on Visual Studio
+
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#pragma once
 
 #include <stdio.h>
 #include <math.h>
@@ -28,9 +34,8 @@
 #include <ctype.h>
 #include <string.h>
 
-#pragma warning(disable : 4996) // Disable _CRT_SECURE_WARNINGS on Visual Studio
+#define ClearInputQueue() while (getchar() != '\n') continue;
 
-inline void ClearInputQueue();
 int compare_int(const void * num1, const void * num2);
 
 void homework1_2(void);
@@ -48,8 +53,4 @@ void homework3_2(void);
 void homework3_3(void);
 void homework3_4(void);
 
-void ClearInputQueue()
-{
-	while (getchar() != '\n')
-		continue;
-}
+#endif // _MAIN_H_

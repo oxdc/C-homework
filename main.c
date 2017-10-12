@@ -27,6 +27,7 @@ int main(void)
 	homework1_4();
 	*/
 
+	/*
 	// Homework : 2017-09-28
 	// 1、2、3、4、P38 5
 	homework2_1();
@@ -41,6 +42,15 @@ int main(void)
 	homework3_2();
 	homework3_3();
 	homework3_4();
+	*/
+
+	// Homework : 2017-09-28
+	// P77 2、7、8、9
+	homework4_1();
+	homework4_2();
+	homework4_3_1();
+	homework4_3_2();
+	homework4_4();
 
 	return 0;
 }

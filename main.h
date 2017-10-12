@@ -33,6 +33,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <wchar.h>
+#include <wctype.h>
 
 #define ClearInputQueue() while (getchar() != '\n') continue;
 
@@ -52,5 +54,11 @@ void homework3_1(void);
 void homework3_2(void);
 void homework3_3(void);
 void homework3_4(void);
+
+void homework4_1(void);
+void homework4_2(void);
+void homework4_3_1(void);
+void homework4_3_2(void);
+void homework4_4(void);
 
 #endif // _MAIN_H_

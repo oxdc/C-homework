@@ -32,5 +32,8 @@
     <ClCompile Include="..\..\20170930\src20180930.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\20171012\src20171012.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -51,7 +51,7 @@ void homework4_2(void)
 	int year = 0, month = 0, day = 0;
 
 	/* DO NOT use switch-case block or if-else block.
-	   Radom access of array will be faster than switch-case and if-else.
+	   Random access of array will be faster than switch-case and if-else.
 	   Moreover, this method uses less memory since J**s also take up memory.
 	   J**s = JMP, JECXZ, JA, JB, JG, JL, JE, JZ, JS, JC, JO, JP ... on x86 CPU
 	   */
@@ -160,7 +160,7 @@ void homework4_3_1(void)
 	{
 		printf("You give me a digit.\n");
 	}
-	/* I regard `¿Õ¸ñ` as blank since this will be closer with
+	/* I regard `ï¿½Õ¸ï¿½` as blank since this will be closer with
 	   the situations in program design */
 	else if (isblank(ch))
 	{
@@ -195,7 +195,7 @@ void homework4_3_2(void)
 	{
 		printf("You give me a digit.\n");
 	}
-	/* I regard `¿Õ¸ñ` as blank since this will be closer with
+	/* I regard `ï¿½Õ¸ï¿½` as blank since this will be closer with
 	   the situations in program design. */
 	else if (iswblank(ch))
 	{

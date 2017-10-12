@@ -27,7 +27,7 @@ void homework4_1(void)
 
 		ClearInputQueue();
 	}
-	
+
 	ClearInputQueue();
 
 	printf("result = %c\n", (isupper(ch)) ? tolower(ch) : ch);
@@ -40,8 +40,8 @@ void homework4_1(void)
 int IsLeapYear(int year)
 {
 	return (
-		(year % 4 == 0 && year % 100 != 0) && 
-		year % 400 == 0 && 
+		(year % 4 == 0 && year % 100 != 0) &&
+		year % 400 == 0 &&
 		year >= 0
 		) ? 1 : 0;
 }
@@ -90,7 +90,7 @@ void homework4_2(void)
 			continue; // #1
 		}
 
-		/* #1 : display assertions one by one. 
+		/* #1 : display assertions one by one.
 		   Or display all of them at the same time without `continue`.
 		   The later design will be more customer-friendly in real programming project.
 		   */
@@ -101,22 +101,23 @@ void homework4_2(void)
 
 	int sum = 0;
 
-	for (int i = 1; i < month; ++i)
+	int i;
+	for (i = 1; i < month; ++i)
 	{
 		sum += IsLeapYear(year) ? daysLeap[i - 1] : daysNotLeap[i - 1];
 	}
 
 	sum += day;
 
-	printf("Its the %d%s day in this year.\n", sum, 
-		/* using lookup table to display order numbers in English, 
-		   such as 1st, 2nd, 3rd. 
+	printf("Its the %d%s day in this year.\n", sum,
+		/* using lookup table to display order numbers in English,
+		   such as 1st, 2nd, 3rd.
 		   This will be easier and faster than if-else blocks. */
-		"st\0nd\0rd\0th" + 
+		"st\0nd\0rd\0th" +
 			/* if the last digit of sum is 1, 2, 3 and it's not 11, 12, 13 */
 			((sum % 10 > 0 && sum % 10 < 4 && sum % 100 != 11 && sum % 100 != 12 && sum % 100 != 13)
 			/* then show *st *nd or *rd */
-			? (sum % 10 - 1) * 3 
+			? (sum % 10 - 1) * 3
 			/* or display *th instead */
 			: 9)
 	);
@@ -159,7 +160,7 @@ void homework4_3_1(void)
 	{
 		printf("You give me a digit.\n");
 	}
-	/* I regard `¿Õ¸ñ` as blank since this will be closer with 
+	/* I regard `¿Õ¸ñ` as blank since this will be closer with
 	   the situations in program design */
 	else if (isblank(ch))
 	{
@@ -184,7 +185,7 @@ void homework4_3_2(void)
 
 	ClearInputQueue();
 
-	/* The following result is associated with the locale settings. 
+	/* The following result is associated with the locale settings.
 	   However, changing the global locale setting may not be a good idea. */
 	if (iswalpha(ch))
 	{

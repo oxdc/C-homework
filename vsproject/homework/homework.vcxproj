@@ -118,6 +118,7 @@
     <ClCompile Include="..\..\20170928\src20170928.c" />
     <ClCompile Include="..\..\20170930\src20180930.c" />
     <ClCompile Include="..\..\20171012\src20171012.c" />
+    <ClCompile Include="..\..\20171019\src20171019.c" />
     <ClCompile Include="..\..\main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

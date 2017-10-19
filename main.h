@@ -61,4 +61,12 @@ void homework4_3_1(void);
 void homework4_3_2(void);
 void homework4_4(void);
 
+void homework5_1(void);
+void homework5_2(void);
+void homework5_3(void);
+void homework5_4(void);
+void homework5_5(void);
+void homework5_6(void);
+void homework5_7(void);
+
 #endif // _MAIN_H_

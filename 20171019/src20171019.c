@@ -70,7 +70,7 @@ void homework5_3(void)
 {
 	int p = 1;
 	double s = 0;
-	
+
 	for (; p <= 200; ++p)
 	{
 		s += 1 / (double)p;
@@ -129,7 +129,7 @@ void homework5_5(void)
 	int i;
 	for (i = 0; i < digits; ++i)
 	{
-		sum += (iNum / (int)pow(10, i)) % 10;
+		sum += (iNum / (int)powl(10, i)) % 10;
 	}
 
 	printf("And the sum of each digit is equal to %d.\n", sum);

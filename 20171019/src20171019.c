@@ -86,14 +86,19 @@ void homework5_3(void)
 void homework5_4(void)
 {
 	int a1 = 1, a2 = 1;
-	printf("%d, %d\n", a1, a2);
+	printf("%d, %d, ", a1, a2);
+	int count = 2;
 
 	while (a1 <= 10000 || a2 <= 10000)
 	{
 		a1 += a2;
 		a2 += a1;
-		printf("%d, %d\n", a1, a2);
+
+		printf((++count % 5 != 0) ? "%d, " : "%d\n", a1);
+		printf((++count % 5 != 0) ? "%d, " : "%d\n", a2);
 	}
+
+	printf("\b\b \n");
 
 	system("pause");
 }

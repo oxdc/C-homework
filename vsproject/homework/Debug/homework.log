@@ -1,2 +1,8 @@
-﻿  src20171026.c
+﻿  src20171102.c
+d:\projects\c-homework\20171102\src20171102.c(126): warning C4018: “<”: 有符号/无符号不匹配
+d:\projects\c-homework\20171102\src20171102.c(253): warning C4090: “函数”: 不同的“const”限定符
+d:\projects\c-homework\20171102\src20171102.c(254): warning C4090: “函数”: 不同的“const”限定符
+d:\projects\c-homework\20171102\src20171102.c(260): warning C4090: “函数”: 不同的“const”限定符
+d:\projects\c-homework\20171102\src20171102.c(279): warning C4101: “result”: 未引用的局部变量
+d:\projects\c-homework\20171102\src20171102.c(290): warning C4715: “GetGreatestCommonDivisor_byBitMap”: 不是所有的控件路径都返回值
   homework.vcxproj -> D:\Projects\C-homework\vsproject\Debug\homework.exe

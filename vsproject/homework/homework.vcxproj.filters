@@ -18,7 +18,7 @@
     <ClCompile Include="..\..\main_new.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\20171026\src20171026.c">
+    <ClCompile Include="..\..\20171102\src20171102.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <ClInclude Include="..\..\Include\lib.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\20171026\h20171026.h">
+    <ClInclude Include="..\..\20171102\h20171102.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

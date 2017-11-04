@@ -39,7 +39,7 @@ int GetLeastCommonMultiple_byEuclideanAlgorithm(int a, int b);
 
 long double lfrand(long double lower, long double upper);
 long double lfabs(long double x);
-long double CalculatePi(long double error);
+double CalculatePi(long double error);
 double Integral(long double error);
 
 int YangsTriangle(int row, int column);

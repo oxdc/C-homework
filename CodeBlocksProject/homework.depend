@@ -23,3 +23,27 @@
 1508406875 source:e:\projects\c-homework\20171019\src20171019.c
 	"../main.h"
 
+1509793665 source:e:\projects\c-homework\main_new.c
+	"20171026\h20171026.h"
+
+1509793665 e:\projects\c-homework\20171026\h20171026.h
+	"../Include/lib.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1509793665 e:\projects\c-homework\include\lib.h
+
+1509794396 source:e:\projects\c-homework\20171102\src20171102.c
+	"h20171102.h"
+
+1509793665 e:\projects\c-homework\20171102\h20171102.h
+	"../Include/lib.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<assert.h>
+	<time.h>
+	<limits.h>
+

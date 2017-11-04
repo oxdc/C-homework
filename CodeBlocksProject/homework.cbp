@@ -31,25 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../20170921/src.c">
+		<Unit filename="../20171102/h20171102.h" />
+		<Unit filename="../20171102/src20171102.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../20170928/src20170928.c">
+		<Unit filename="../Include/lib.h" />
+		<Unit filename="../main_new.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../20170930/src20180930.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../20171012/src20171012.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../20171019/src20171019.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="../main.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

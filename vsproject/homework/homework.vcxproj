@@ -19,11 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\20171102\src20171102.c" />
+    <ClCompile Include="..\..\20171116\rectangle.c" />
+    <ClCompile Include="..\..\20171116\src20171116.c" />
+    <ClCompile Include="..\..\20171116\sysenv.c" />
     <ClCompile Include="..\..\main_new.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\20171102\h20171102.h" />
+    <ClInclude Include="..\..\20171116\h20171116.h" />
+    <ClInclude Include="..\..\20171116\rectangle.h" />
+    <ClInclude Include="..\..\20171116\sysenv.h" />
     <ClInclude Include="..\..\Include\lib.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

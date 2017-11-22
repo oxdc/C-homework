@@ -1,5 +1,8 @@
 #include "h20171102.h"
 
+#define min(x, y) (((x) < (y)) ? ((x)) : ((y)))
+#define max(x, y) (((x) > (y)) ? ((x)) : ((y)))
+
 /*
  * initialize a bit map with given length
  * @param map [a pointer to an non-null bit map]
@@ -100,10 +103,10 @@ void __CloseN(struct BitMap * map, const size_t location)
 }
 
 /*
- * To merge two given bit map. And get a new bit map with the same 
+ * To merge two given bit map. And get a new bit map with the same
  *  open bit in map1 and map2.
  * @param output [a pointer to an empty bit map to store the result]
- * @param map1 [a pointer to an non-null bit map] 
+ * @param map1 [a pointer to an non-null bit map]
  * @param map1 [a pointer to another non-null bit map]
  */
 void __MergeBitMap(struct BitMap * output, const struct BitMap * map1, const struct BitMap * map2)
@@ -162,12 +165,12 @@ void homework_2017_11_02_main(void)
 		int a = 0, b = 0;
 		GetInt(&a, &b);
 		printf("the greatest common divisor of %d and %d is %d\n",
-			a, 
-			b, 
+			a,
+			b,
 			GetGreatestCommonDivisor_byBitMap(a, b));
-		printf("the least common multiple of %d and %d is %d\n", 
-			a, 
-			b, 
+		printf("the least common multiple of %d and %d is %d\n",
+			a,
+			b,
 			GetLeastCommonMultiple_byBitMap(a, b));
 
 		printf("---------------------------------------------------\n");
@@ -305,7 +308,7 @@ int GetGreatestCommonDivisor_byEuclideanAlgorithm(int a, int b)
 	return a + b;
 }
 
-int GetLeastCommonMultiple_byEuclideanAlgorithm(int a, int b) 
+int GetLeastCommonMultiple_byEuclideanAlgorithm(int a, int b)
 {
 	return a * b / GetGreatestCommonDivisor_byEuclideanAlgorithm(a, b);
 }
@@ -330,10 +333,10 @@ long double lfabs(long double x)
 	return x < 0 ? -x : x;
 }
 
-long double CalculatePi(long double error)
+double CalculatePi(long double error)
 {
 	long long total = 0, totalInTheCircle = 0;
-	long double storedResult = 0.0;
+	double storedResult = 0.0;
 
 	do
 	{
@@ -350,7 +353,7 @@ long double CalculatePi(long double error)
 
 		if (total % 100)
 		{
-			if (lfabs((storedResult - totalInTheCircle / (long double) total) * 4) < error &&
+			if (lfabs((storedResult - totalInTheCircle / (long double)total) * 4) < error &&
 				lfabs((storedResult - totalInTheCircle / (long double)total) * 4) > 0 &&
 				storedResult != 0.0)
 			{
@@ -428,9 +431,9 @@ void DisplayYangsTriangle(int depth)
 		for (column = 1; column <= row; ++column)
 		{
 			int result = YangsTriangle(row, column);
-			
-			printf(result < 10 ? " %d      " : 
-				  (result < 100 ? " %d     " : "%d     "), 
+
+			printf(result < 10 ? " %d      " :
+				  (result < 100 ? " %d     " : "%d     "),
 				   result);
 		}
 

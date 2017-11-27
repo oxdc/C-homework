@@ -575,7 +575,7 @@ void SquareConvolution(
 		(int)(*(int*)At(map, left_top_row + 1, left_top_col)) +
 		(int)(*(int*)At(map, left_top_row, left_top_col + 1)) +
 		(int)(*(int*)At(map, left_top_row + 1, left_top_col + 1))
-			<= 2)
+			<= 1)
 	{
 		return;
 	}
@@ -662,7 +662,7 @@ void SaddlePoint(
 	}
 
 	// To check each 2x2 square. If the total value is above
-	// 2, it means that there are more than 2 suspicious points
+	// 1, it means that there are more than 2 suspicious points
 	// in a 2x2 square, namely, they are "connected".
 	// If so, give them a value 2, which shows that saddle points
 	// must be disjoint.
@@ -672,7 +672,7 @@ void SaddlePoint(
 	// | 0  1 | => Not suspicious points, connected set
 	//
 	// | 1  0 |
-	// | 0  1 | => Suspicious points!
+	// | 0  0 | => Suspicious points!
 	//
 	// | 1  0 |
 	// | 0  2 | => Not suspicious points, connected set

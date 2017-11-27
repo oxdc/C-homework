@@ -196,7 +196,9 @@ void walkant(void)
 
 		for (id = 0; id < count; ++id)
 		{
-			if (ants_location[id] + direction[id] < 0 || ants_location[id] + direction[id] >= length || ants_location[id] == -1)
+			if (ants_location[id] + direction[id] < 0 || 
+				ants_location[id] + direction[id] >= length || 
+				ants_location[id] == -1)
 			{
 				ants_location[id] = -1;
 				continue;
@@ -216,7 +218,8 @@ void walkant(void)
 					direction[id] = -direction[id];
 					direction[i] = -direction[i];
 				}
-				else if (abs(ants_location[i] - ants_location[id]) == 1)
+				else if (abs(ants_location[i] - ants_location[id]) == 1 &&
+					direction[i] + direction[id] == 0)
 				{
 					direction[id] = -direction[id];
 					direction[i] = -direction[i];
@@ -226,7 +229,7 @@ void walkant(void)
 			ants_location[id] += direction[id];
 		}
 
-		Wait(200);
+		Wait(2000);
 	}
 
 	free(direction);

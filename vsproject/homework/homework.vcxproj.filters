@@ -18,13 +18,10 @@
     <ClCompile Include="..\..\main_new.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\20171116\src20171116.c">
+    <ClCompile Include="..\..\20171123\src20171123.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\20171116\rectangle.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\20171116\sysenv.c">
+    <ClCompile Include="..\..\CCT\sysenv.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +29,10 @@
     <ClInclude Include="..\..\Include\lib.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\20171116\h20171116.h">
+    <ClInclude Include="..\..\20171123\h20171123.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\20171116\rectangle.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\20171116\sysenv.h">
+    <ClInclude Include="..\..\CCT\sysenv.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,7 +23,7 @@ void homework_1(void)
 
 	for (i = 0; i < 10; ++i)
 	{
-		printf("Give me the NO.%d integer: ", i);
+		printf("Give me the NO.%d integer: ", i + 1);
 		while (1 != scanf("%d", &input))
 		{
 			printf("Input must be an integer!\n");
@@ -161,7 +161,7 @@ void homework_p160_8(void)
 
 	SaddlePoint(&mat_random);
 
-	printf("It's seems impossible to generate a random matrix with "
+	printf("It seems impossible to generate a random matrix with "
 		"saddle points. So I also give an example here :\n");
 
 	*(int*)At(&mat_random, 0, 0) = 1;
@@ -213,7 +213,7 @@ void homework_p160_8(void)
 	SaddlePoint(&mat_random);
 
 	printf("IMPORTANT: I also added a necessary condition to the "
-		"definition of saddle point : they must be splitted, which"
+		"definition of saddle point : they must be disjoint, which"
 		" will be better, but not perfect yet. :)\n");
 	FreeMatrix(&mat_random);
 	Pause();
@@ -449,6 +449,8 @@ void CharStat(const char * str)
 	int bar_width = (window_width - 2) / 26;
 
 	printf("Statistical results :\n");
+
+	// To draw a horizontal line
 	i = bar_width * 26;
 	while (i-- > 0)
 	{
@@ -456,6 +458,7 @@ void CharStat(const char * str)
 	}
 	putchar('\n');
 
+	// To draw the results
 	for (i = 0; i < 20; ++i)
 	{
 		char * display_buf = (char*)malloc(window_width * sizeof(char));
@@ -478,6 +481,7 @@ void CharStat(const char * str)
 		free(display_buf);
 	}
 
+	// To draw a horizontal line
 	i = bar_width * 26;
 	while (i-- > 0)
 	{
@@ -485,6 +489,7 @@ void CharStat(const char * str)
 	}
 	putchar('\n');
 
+	// To draw the results
 	i = 0;
 	int j = 0;
 	while (i++ < window_width - 1)
@@ -512,6 +517,7 @@ void CharStat(const char * str)
 
 	Pause();
 
+	// To draw a horizontal line
 	i = window_width - 1;
 	while (i-- > 0)
 	{
@@ -520,6 +526,7 @@ void CharStat(const char * str)
 	putchar('\n');
 
 	printf("Statistical results :\n");
+	// To draw the results
 	for (i = 0; i < 26; i++)
 	{
 		double value = stat[i] / (double)sum * 100;
@@ -540,6 +547,7 @@ void CharStat(const char * str)
 		putchar('\n');
 	}
 
+	// To draw a horizontal line
 	i = window_width - 1;
 	while (i-- > 0)
 	{
@@ -567,12 +575,21 @@ void SquareConvolution(
 		(int)(*(int*)At(map, left_top_row + 1, left_top_col)) +
 		(int)(*(int*)At(map, left_top_row, left_top_col + 1)) +
 		(int)(*(int*)At(map, left_top_row + 1, left_top_col + 1))
-			> 2)
+			<= 2)
 	{
-		*(int*)At(map, left_top_row, left_top_col) = 2;
-		*(int*)At(map, left_top_row + 1, left_top_col) = 2;
-		*(int*)At(map, left_top_row, left_top_col + 1) = 2;
-		*(int*)At(map, left_top_row + 1, left_top_col + 1) = 2;
+		return;
+	}
+
+	int x, y;
+	for (x = left_top_row; x <= left_top_row + 1 ; ++x)
+	{
+		for (y = left_top_col; y <= left_top_col + 1; ++y)
+		{
+			if (*(int*)At(map, x, y) > 0)
+			{
+				*(int*)At(map, x, y) = 2;
+			}
+		}
 	}
 }
 
@@ -648,7 +665,7 @@ void SaddlePoint(
 	// 2, it means that there are more than 2 suspicious points
 	// in a 2x2 square, namely, they are "connected".
 	// If so, give them a value 2, which shows that saddle points
-	// must be splitted.
+	// must be disjoint.
 	// 
 	// Examples :
 	// | 1  1 |

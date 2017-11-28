@@ -1,8 +1,8 @@
 #ifndef _H_20171123_H_
 #define _H_20171123_H_
 
-#include "..\Include\lib.h"
-#include "..\CCT\sysenv.h"
+#include "../Include/lib.h"
+#include "../CCT/sysenv.h"
 #include<ctype.h>
 #include<string.h>
 #include<time.h>

@@ -55,7 +55,7 @@ void homework_2(void)
 {
 	ClearConsoleWindow();
 	printf("A simple test for MyStrlen(): \n");
-	printf("The length of \"Hello, world!\" is %d.\n",
+	printf("The length of \"Hello, world!\" is %ld.\n",
 		MyStrlen("Hello, world!"));
 	Pause();
 }

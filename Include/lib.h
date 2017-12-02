@@ -7,8 +7,13 @@
 #define MIN(a,b) (((a) < (b)) ? (a) : (b)
 
 #define ClearInputQueue() while (getchar() != '\n') continue;
+#ifndef BOOL
 #define BOOL short
+#endif // !BOOL
+
 #define TRUE 1
 #define FALSE 0
+
+#define LineBreak() putchar('\n');
 
 #endif // !_LIB_H_OF_C_HOMEWORK_

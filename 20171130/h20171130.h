@@ -17,12 +17,12 @@ typedef struct _Student {
 } Student;
 
 typedef Student** Students;
-typedef struct _Point {
+typedef struct tPoint {
 	double x;
 	double y;
 } Point;
 
-typedef struct _Complex {
+typedef struct tComplex {
 	double real;
 	double imaginary;
 } Complex;
@@ -72,12 +72,12 @@ long BinarySearch(
 );
 
 double Distance(
-	Point a, 
+	Point a,
 	Point b
 );
 
 Complex ComplexMultiply(
-	Complex a, 
+	Complex a,
 	Complex b
 );
 

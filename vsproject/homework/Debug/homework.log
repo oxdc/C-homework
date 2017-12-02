@@ -1,4 +1,5 @@
-﻿  src20171130.c
-d:\projects\c-homework\20171130\src20171130.c(5): warning C4018: “<”: 有符号/无符号不匹配
-d:\projects\c-homework\20171130\src20171130.c(13): warning C4018: “<”: 有符号/无符号不匹配
+﻿  main_new.c
+  autoalloc.c
+  src20171130.c
+  正在生成代码...
   homework.vcxproj -> D:\Projects\C-homework\vsproject\Debug\homework.exe

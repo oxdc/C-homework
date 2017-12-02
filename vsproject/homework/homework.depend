@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1512188681 source:d:\projects\c-homework\20171130\src20171130.c
+	"h20171130.h"
+
+1512189237 d:\projects\c-homework\20171130\h20171130.h
+	"../CCT/sysenv.h"
+	"../CCT/autoalloc.h"
+	"../Include/lib.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+	<limits.h>
+	<float.h>
+
+1511329516 d:\projects\c-homework\cct\sysenv.h
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+	<unistd.h>
+	<sys/ioctl.h>
+
+1512207120 d:\projects\c-homework\cct\autoalloc.h
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1512206017 d:\projects\c-homework\include\lib.h
+
+1511260029 source:d:\projects\c-homework\cct\sysenv.c
+	"sysenv.h"
+
+1512029701 source:d:\projects\c-homework\main_new.c
+	"20171130/h20171130.h"
+

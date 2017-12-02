@@ -24,7 +24,7 @@ void homework_1(void)
 	}
 	ClearInputQueue();
 
-	char ** ref = New(char*, count);
+	char ** ref = (char**)New(char*, count);
 	for (int i = 0; i < count; ++i)
 	{
 		printf("Please input the N.O.%d word : ", i + 1);
@@ -126,7 +126,7 @@ void homework_3(void)
 	while (1 != scanf("%d", &target))
 	{
 		printf("Please input an interger!\n");
-ClearInputQueue();
+		ClearInputQueue();
 	}
 	ClearInputQueue();
 

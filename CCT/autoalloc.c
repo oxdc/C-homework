@@ -200,8 +200,9 @@ void _CCT_autoalloc_DeleteFromBuffer(size_t loc)
 		loc * sizeof(_CCT_Heap_Buf*));
 	memcpy(p_new_buf + loc, 
 		_cct_buf + loc + 1,
-		(_cct_buf_size - loc) * sizeof(_CCT_Heap_Buf*));
+		(_cct_buf_size - loc - 1) * sizeof(_CCT_Heap_Buf*));
 
+	free(_cct_buf);
 	_cct_buf = p_new_buf;
 	_cct_buf[0]->pBuf = (char*)p_new_buf;
 	_cct_buf_size--;
@@ -227,7 +228,7 @@ void _CCT_autoalloc_DisplayAll(void)
 		_cct_buf[0]->size);
 	for (seek = 1; seek < _cct_buf_size; ++seek)
 	{
-		printf("  Item %3d : buf @ %p | size %zu\n", 
+		printf("  Item %3zu : buf @ %p | size %zu\n", 
 			seek, 
 			_cct_buf[seek]->pBuf, 
 			_cct_buf[seek]->size);

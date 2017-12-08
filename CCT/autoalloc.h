@@ -21,8 +21,8 @@
  * Author : Oxdc
  * Email : frnet2016@gmail.com
  *
- * Last update : 2017-11-30
- * Version : 0.0.0.1 (dev)
+ * Last update : 2017-12-08
+ * Version : 0.0.0.2 (dev)
  */
 
 #ifndef _AUTO_ALLOC_H_
@@ -41,14 +41,12 @@ typedef struct __CCT_Heap_Buf {
 	size_t size;
 } _CCT_Heap_Buf;
 
-#ifndef BOOL
-#define BOOL int
+typedef int _cct_BOOL;
 #define TRUE 1
 #define FALSE 0
-#endif // !BOOL
 
-#define _CCT_FATAL_ERR_LOG(msg)							\
-			perror("Fatal error. " #msg "");			\
+#define _CCT_FATAL_ERR_LOG(msg)												\
+			perror("Fatal error. " #msg "");								\
 			exit(EXIT_FAILURE)
 
 void _CCT_autoalloc_InitBuf(void);
@@ -60,35 +58,57 @@ int _CCT_autoalloc_Search(void* p_existed);
 void _CCT_autoalloc_DeleteFromBuffer(size_t loc);
 void _CCT_autoalloc_DisplayAll(void);
 size_t _CCT_autoalloc_GetBufferSize(void* p_existed);
+void* _CCT_autoalloc_Clone(void* p_existed);
 
-#define _CCT_IS_INIT()									\
-			(_cct_buf != NULL &&						\
-			_cct_isReg != FALSE &&						\
+#define _CCT_IS_INIT()														\
+			(_cct_buf != NULL &&											\
+			_cct_isReg != FALSE &&											\
 			_cct_buf_size != 0)
 
-#define _CCT_CHECK_INIT()								\
-			if(!_CCT_IS_INIT())							\
+#define _CCT_CHECK_INIT()													\
+			if(!_CCT_IS_INIT())												\
 				_CCT_autoalloc_InitBuf()
 
-#define New(type,size)									\
-				_CCT_autoalloc_AllocateMemory(			\
+#define New(type,size)														\
+			(type*)_CCT_autoalloc_AllocateMemory(							\
 					(size) * sizeof(type))
 
-#define Delete(pointer)									\
+#define Clone(pointer)														\
+			_CCT_autoalloc_Clone((pointer))
+
+#define Delete(pointer)														\
 			_CCT_autoalloc_DeleteItem((pointer))
 
-#define SizeOf(pointer)									\
+#define SizeOf(pointer)														\
 			_CCT_autoalloc_GetBufferSize((pointer))
 
-#define FreeHeap()										\
+#define CountOf(pointer,type)												\
+			(_CCT_autoalloc_GetBufferSize((pointer)) / sizeof(type))
+
+#define FreeHeap()															\
 			_CCT_autoalloc_FreeMemory()
 
-#define IsAllocated(pointer)							\
-			((_CCT_autoalloc_Search((pointer)) > 0) ?	\
-				TRUE :									\
+#define IsAllocated(pointer)												\
+			((_CCT_autoalloc_Search((pointer)) > 0) ?						\
+				TRUE :														\
 				FALSE)
 
-#define ShowHeap()										\
+#define DisplayHeap()														\
 			_CCT_autoalloc_DisplayAll()
+
+#define ForEach(item,pointer,type)											\
+			for(															\
+				type* item = (type*)((pointer));							\
+				item != (type*)((pointer)) +								\
+					SizeOf((pointer)) / sizeof(type);						\
+				++item														\
+			)
+
+#define $(pointer)															\
+			*((pointer))
+
+#define GetItem(pointer,loc,type)											\
+			(*((type*)((pointer)) + (CountOf(pointer,type) + loc) %			\
+					CountOf(pointer,type)))
 
 #endif // !_AUTO_ALLOC_H_

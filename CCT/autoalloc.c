@@ -21,13 +21,13 @@
  * Author : Oxdc
  * Email : frnet2016@gmail.com
  *
- * Last update : 2017-11-30
- * Version : 0.0.0.1 (dev)
+ * Last update : 2017-12-08
+ * Version : 0.0.0.2 (dev)
  */
 
 #include "autoalloc.h"
 
-BOOL _cct_isReg = FALSE;
+_cct_BOOL _cct_isReg = FALSE;
 _CCT_Heap_Buf ** _cct_buf = NULL;
 size_t _cct_buf_size = 0;
 
@@ -253,4 +253,27 @@ size_t _CCT_autoalloc_GetBufferSize(void * p_existed)
 	}
 	
 	return _cct_buf[loc]->size;
+}
+
+void* _CCT_autoalloc_Clone(void* p_existed)
+{
+	if (p_existed == NULL ||
+		!_CCT_IS_INIT() ||
+		_cct_buf == NULL)
+	{
+		perror("Empty heap. Process terminated.");
+		return NULL;
+	}
+
+	int loc = _CCT_autoalloc_Search(p_existed);
+	if (loc == -1)
+	{
+		perror("Memory block not found. Process terminated.");
+		return NULL;
+	}
+
+	char * new_buffer_to_clone = _CCT_autoalloc_AllocateMemory(_cct_buf[loc]->size);
+	memcpy(new_buffer_to_clone, p_existed, _cct_buf[loc]->size);
+
+	return new_buffer_to_clone;
 }

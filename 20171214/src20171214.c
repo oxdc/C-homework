@@ -2,8 +2,8 @@
 
 void homework_2017_12_14_main(void)
 {
-	//homework_P207_6();
-	//homework_P207_7();
+	homework_P207_6();
+	homework_P207_7();
 	homework_students();
 }
 

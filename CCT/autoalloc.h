@@ -32,6 +32,7 @@
 #include<string.h>
 #include<stdio.h>
 
+#define VISUALSTUDIO
 #ifdef VISUALSTUDIO
 #pragma warning(disable : 4996)
 #endif // VISUALSTUDIO

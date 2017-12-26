@@ -80,7 +80,6 @@ int ConsoleWidth(void)
 #endif
 }
 
-
 int ConsoleHeight(void)
 {
 #if defined(WIN32) || defined(WIN64)
@@ -97,3 +96,43 @@ int ConsoleHeight(void)
 
 #endif
 }
+
+void ClearConsoleWindow_(void)
+{
+	ClearConsoleWindow();
+}
+
+void Pause_(void)
+{
+	Pause();
+}
+
+void FlushStdin_(void)
+{
+	setbuf(stdin, NULL);
+}
+
+void Wait_(unsigned int milliseconds)
+{
+	Wait(milliseconds);
+}
+void SetCursorPos_(int x, int y)
+{
+#if defined(WIN32) || defined(WIN64)
+	COORD cursorPosition;
+	cursorPosition.X = x;
+	cursorPosition.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPosition);
+#elif defined(LINUX)
+#endif
+}
+
+const struct _Console_CCT_ Console = {
+	ConsoleWidth,
+	ConsoleHeight,
+	ClearConsoleWindow_,
+	Pause_,
+	FlushStdin_,
+	Wait_,
+	SetCursorPos_
+};

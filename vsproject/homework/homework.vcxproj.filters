@@ -24,10 +24,16 @@
     <ClCompile Include="..\..\CCT\autoalloc.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\20171214\src20171214.c">
+    <ClCompile Include="..\..\CCT\linkedlist.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\CCT\linkedlist.c">
+    <ClCompile Include="..\..\20171221\src20171221.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CCT\file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CCT\tinyexception.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,10 +47,16 @@
     <ClInclude Include="..\..\CCT\autoalloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\20171214\h20171214.h">
+    <ClInclude Include="..\..\CCT\linkedlist.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\CCT\linkedlist.h">
+    <ClInclude Include="..\..\20171221\h20171221.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CCT\file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CCT\tinyexception.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

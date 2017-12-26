@@ -19,17 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\20171214\src20171214.c" />
+    <ClCompile Include="..\..\20171221\src20171221.c" />
     <ClCompile Include="..\..\CCT\autoalloc.c" />
+    <ClCompile Include="..\..\CCT\file.c" />
     <ClCompile Include="..\..\CCT\linkedlist.c" />
     <ClCompile Include="..\..\CCT\sysenv.c" />
+    <ClCompile Include="..\..\CCT\tinyexception.c" />
     <ClCompile Include="..\..\main_new.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\20171214\h20171214.h" />
+    <ClInclude Include="..\..\20171221\h20171221.h" />
     <ClInclude Include="..\..\CCT\autoalloc.h" />
+    <ClInclude Include="..\..\CCT\file.h" />
     <ClInclude Include="..\..\CCT\linkedlist.h" />
     <ClInclude Include="..\..\CCT\sysenv.h" />
+    <ClInclude Include="..\..\CCT\tinyexception.h" />
     <ClInclude Include="..\..\Include\lib.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

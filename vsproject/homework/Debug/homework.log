@@ -1,2 +1,3 @@
-﻿  src20171214.c
+﻿  src20171221.c
+c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\minwindef.h(157): warning C4091: “typedef ”: 没有声明变量时忽略“short”的左侧
   homework.vcxproj -> D:\Projects\C-homework\vsproject\Debug\homework.exe

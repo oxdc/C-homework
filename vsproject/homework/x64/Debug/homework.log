@@ -1,6 +1,0 @@
-﻿  main_new.c
-  src20171116.c
-d:\projects\c-homework\20171116\src20171116.c(46): warning C4013: “sacnf”未定义；假设外部返回 int
-  正在生成代码...
-src20171116.obj : error LNK2019: 无法解析的外部符号 sacnf，该符号在函数 ant 中被引用
-D:\Projects\C-homework\vsproject\x64\Debug\homework.exe : fatal error LNK1120: 1 个无法解析的外部命令
